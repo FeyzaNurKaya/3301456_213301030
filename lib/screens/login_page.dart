@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
                   border: OutlineInputBorder(),
                 ),
                 validator: (value) {
-                  if (value == null) {
+                  if (value!.isEmpty) {
                     return 'Kullanıcı Adınızı Giriniz';
                   } else {
                     return null;
