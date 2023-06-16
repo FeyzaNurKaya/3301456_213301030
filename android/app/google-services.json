@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "187718564827",
+    "project_id": "technomarket-37ee6",
+    "storage_bucket": "technomarket-37ee6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187718564827:android:6247bbf39b7b4c5564c5fe",
+        "android_client_info": {
+          "package_name": "com.example.market_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187718564827-tu5nfbbnjmkh666u0cqssktrfu7u2fbd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkIEsLinREk_DmINMADINOV7Y6z3SQKNc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187718564827-tu5nfbbnjmkh666u0cqssktrfu7u2fbd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

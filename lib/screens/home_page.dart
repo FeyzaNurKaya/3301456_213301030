@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:market_application/models/category.dart';
+import 'package:market_application/models/categories.dart';
+import 'package:market_application/models/favorite.dart';
+import 'package:market_application/models/models/account.dart';
+import 'package:market_application/models/models/anasayfa.dart';
+import 'package:market_application/models/models/sepet.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -8,21 +12,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
+  List<String> favoriteProducts = [];
+  List<String> sepetUrunler = [];
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Anasayfan Yakında Daha Güzel Olacak',
-    ),
+  static final List<Widget> _widgetOptions = <Widget>[
+    Anasayfa(),
     CategoryPage(),
-    Text(
-      'Favorilerin',
-    ),
-    Text(
-      'Sepetin Şuan Boşşş',
-    ),
-    Text(
-      'Hesabın Çok Yakında Seninle',
-    ),
+    FavoritesPage(),
+    CartPage(),
+    AccountPage(),
   ];
 
   void _onItemTapped(int index) {
@@ -38,9 +36,7 @@ class _HomePageState extends State<HomePage> {
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.purple,
-        unselectedItemColor: Colors.purple,
-        items: const [
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Anasayfa',
@@ -51,18 +47,20 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.favorite),
-            label: 'Favoriler',
+            label: 'Favorilerim',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_cart),
             label: 'Sepetim',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle),
+            icon: Icon(Icons.person),
             label: 'Hesabım',
           ),
         ],
         currentIndex: _selectedIndex,
+        selectedItemColor: Colors.purple,
+        unselectedItemColor: Colors.purple,
         onTap: _onItemTapped,
       ),
     );
